@@ -1,0 +1,8 @@
+public class Hw2_4 {
+    public static void main(String[] args) {
+       double deposit = 10000;
+		   double percent = 12.0;
+		   double incom = (((deposit * percent)/100)/12)*6;
+		System.out.println("incom = " + incom);
+    }
+}
