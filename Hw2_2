@@ -1,0 +1,12 @@
+public class Hw2_2{
+    public static void main(String[] arg) {
+        int n = 123;
+        int n1 = 0;
+         while (n != 0) {
+                n1 = n1 * 10 + n % 10;
+                n /= 10;
+            }
+         int n2 = n1 - 123;
+               System.out.println("n2 = " + n2);
+    }
+}
