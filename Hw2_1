@@ -1,0 +1,14 @@
+public class Hw2_1{
+    public static void main(String[] arg) {
+        int A = 7;
+        int B = 3;
+        if ( A == 7 & B == 3);
+        B = A;
+        A = 3;
+        System.out.println("A = " + A);
+        System.out.println("B = " + B);
+               }
+    }
+    // результат выполнения
+    //А=3
+    //B=7
