@@ -1,0 +1,10 @@
+public class Hw2_3{
+    public static void main(String[] arg) {
+       Scanner scan = new Scanner(System.in);
+            System.out.print("Pounds -> ");
+            double Lb = scan.nextDouble();
+            double kg = Lb*0.4536;
+            double g = (kg - (int)kg)*1000;
+     System.out.println("Kilograms -> " + (int)kg +" kg "+ (int)g + " g");
+ }
+}
