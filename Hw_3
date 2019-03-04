@@ -1,0 +1,60 @@
+package com.epam.HW_3;
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+public class Hw_3 {
+    public static void main (String[] args) throws java.io.IOException {
+        char take, donttake;
+        do {
+            System.out.print("Make your choice -> ");
+            take = (char) System.in.read();
+            do {
+                donttake = (char) System.in.read();
+            } while(donttake != '\n');
+        } while ( take < '1' | take > '5');
+        System.out.println("\n");
+        switch(take) {
+            case '1':
+                System.out.println("*");
+                System.out.println("***");
+                System.out.println("****");
+                System.out.println("******");
+                System.out.println("****");
+                System.out.println("***");
+                System.out.println("*");
+                break;
+            case '2':
+                System.out.println("******");
+                System.out.println("  ****");
+                System.out.println("   ***");
+                System.out.println("     *");
+                break;
+            case '3':
+                System.out.println("     *");
+                System.out.println("   ***");
+                System.out.println("  ****");
+                System.out.println("******");
+                break;
+            case '4':
+                System.out.println("     *");
+                System.out.println("   ***");
+                System.out.println("  ****");
+                System.out.println("******");
+                System.out.println("  ****");
+                System.out.println("   ***");
+                System.out.println("     *");
+                break;
+            case '5':
+                System.out.println("      *     ");
+                System.out.println("    *****   ");
+                System.out.println("  ********* ");
+                System.out.println("************");
+                System.out.println("      *     ");
+                System.out.println("    *****   ");
+                System.out.println("  ********* ");
+                System.out.println("************");
+                break;
+        }
+    }
+}
