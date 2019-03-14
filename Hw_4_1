@@ -1,0 +1,20 @@
+package com.epam.examle1.HW_4_1;
+import java.util.Scanner;
+
+public class HW_4_1 {
+  public static void main(String[] args) {
+      Scanner sc = new Scanner(System.in);
+      System.out.print("Please enter decimal number -> ");
+      int number = sc.nextInt();
+      String str = HW_4_1(number);
+      System.out.println( "Your decimal number in binary will be -> " + str);
+  }
+  static String HW_4_1(int number) {
+      String bnr = "";
+      while (number > 0) {
+          bnr =  ((number % 2) == 0 ? "0" : "1") + bnr;
+          number = number/2;
+      }
+      return bnr;
+  }
+}
