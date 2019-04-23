@@ -1,0 +1,48 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        
+        System.out.print("Введите размер массива (не менее 2-x элементов) -> ");
+        
+        int size = input();
+        int[] arrayFirst = createArray(size);
+        int[] arraySecond = createArray(size);
+        int[] arraysSumm = arraysSumm(arrayFirst, arraySecond);
+        
+        System.out.println("Массив №1 состоит из: " + Arrays.toString(arrayFirst));
+        System.out.println("Массив №2 состоит из: " + Arrays.toString(arraySecond));
+        System.out.println("Массив №3 как сумма элементов массивов №1 и №2 состоит из: " + Arrays.toString(arraysSumm));
+        
+    }
+
+    static int[] createArray(int size) {
+        int[] array = new int[size];
+        for (int i = 0; i < array.length; i++) {
+            array[i] = (int) (Math.random() * 100);
+        }
+        return array;
+    }
+
+    static int input() {
+        Scanner sc = new Scanner(System.in);
+        int size;
+        do {
+            size = sc.nextInt();
+            if (size < 2) {
+                System.out.print("Введите корректный размер массива -> ");
+            }
+        }
+        while (size < 2);
+        return size;
+    }
+
+    static int[] arraysSumm(int[] arrayFirst, int[] arraySecond) {
+        int[] arraysSumm = new int[arrayFirst.length];
+        for (int i = 0; i < arraysSumm.length; i++) {
+            arraysSumm[i] = arrayFirst[i] + arraySecond[i];
+        }
+        return arraysSumm;
+    }
+}
