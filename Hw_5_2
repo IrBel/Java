@@ -1,0 +1,49 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        System.out.print("Введите размер массива (не менее 3 элементов) -> ");
+
+        int size = input();
+        int[] array = createArray(size);
+        System.out.println("Массив состоит из элементов:" + Arrays.toString(array));
+        getSummOddElements(array);
+    }
+
+    static int[] createArray(int size) {
+        int[] array = new int[size];
+        for (int i = 0; i < array.length; i++) {
+            array[i] = (int) (Math.random() * 100);
+        }
+        return array;
+    }
+
+    static int input() {
+        Scanner sc = new Scanner(System.in);
+        int size;
+        do {
+            size = sc.nextInt();
+            if (size < 3) {
+                System.out.print("Введите корректный размер массива -> ");
+            }
+        }
+        while (size < 3);
+        return size;
+    }
+
+    static void getSummOddElements(int[] array) {
+        int oddNumber = 0;
+        int oddSummary = 0;
+        for (int i = 0; i < array.length; i++) {
+            if (i % 2 != 0) {
+                oddNumber++;
+                oddSummary += array[i];
+            }
+        }
+
+        System.out.println("В массиве нечётных элементов: " + oddNumber + "" +
+                "\nСумма нечётных значений = " + oddSummary);
+    }
+}
