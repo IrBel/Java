@@ -4,13 +4,13 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        System.out.print("Введите размер массива (не менее 3) -> ");
+        System.out.print("Введите размер массива (не менее 3 элементов) -> ");
 
         int size = input();
         int[] array = createArray(size);
         int[] arrayReverse = reverseArray(array);
-        System.out.println("Массив систоит из значений: " + Arrays.toString(array));
-        System.out.println("Обратный порядок значений массива: " + Arrays.toString(arrayReverse));
+        System.out.println("Массив систоит из элементов: " + Arrays.toString(array));
+        System.out.println("Обратный порядок элементов массива: " + Arrays.toString(arrayReverse));
     }
 
     static int[] createArray(int size) {
